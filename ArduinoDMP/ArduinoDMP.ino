@@ -118,8 +118,7 @@ void setup() {
     Serial.print(devStatus);
     Serial.println(F(")"));
   }
-  Serial.println();
-  Serial.println("READY");
+  Serial.println("R");
 }
 
 
@@ -145,12 +144,14 @@ void loop() {
         //calibrate
         mpu.CalibrateAccel(6);
         mpu.CalibrateGyro(6);
-        Serial.println();
-        Serial.println("READY");
+        Serial.print("C");
         break;
-      case 'r':
+      case 'd':
         printPitchRoll();
         break;
+      case 'r':
+       Serial.print("R");
+       break;
       default:
         break;
 
@@ -164,5 +165,5 @@ void printPitchRoll() {
   Serial.print(ypr[1] * sf);
   Serial.print(DATA_SEP);
   Serial.print(ypr[2] * sf);
-  Serial.println();
+  Serial.print(";");
 }
