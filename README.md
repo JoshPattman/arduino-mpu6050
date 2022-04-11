@@ -16,6 +16,6 @@ You need the following arduino libraries for the code to work:
 
 For instructions of how to install these, go to the [I2cdev github](https://github.com/jrowberg/i2cdevlib)
 ## For people using this for `spotpuppy` python library
-Use the main branch
+Use the `main` branch
 ## For people using this for `spotpuppy-go` golang package (or most other use cases)
-Use the simple branch. It has a cleaner protocol and runs more reliably.
+Use the `simple` branch. It has a cleaner protocol and runs more reliably.
