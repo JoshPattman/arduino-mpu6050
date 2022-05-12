@@ -149,6 +149,9 @@ void loop() {
       case 'd':
         printPitchRoll();
         break;
+      case 'q':
+        printQuat();
+        break;
       case 'r':
        Serial.print("R");
        break;
@@ -165,5 +168,17 @@ void printPitchRoll() {
   Serial.print(ypr[1] * sf);
   Serial.print(DATA_SEP);
   Serial.print(ypr[2] * sf);
+  Serial.print(";");
+}
+
+void printQuat(){
+  Serial.print("Q");
+  Serial.print(q[0]);
+  Serial.print(DATA_SEP);
+  Serial.print(q[1]);
+  Serial.print(DATA_SEP);
+  Serial.print(q[2]);
+  Serial.print(DATA_SEP);
+  Serial.print(q[3]);
   Serial.print(";");
 }
