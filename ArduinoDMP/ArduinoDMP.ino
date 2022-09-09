@@ -173,12 +173,12 @@ void printPitchRoll() {
 
 void printQuat(){
   Serial.print("Q");
-  Serial.print(q[0]);
+  Serial.print(q.w);
   Serial.print(DATA_SEP);
-  Serial.print(q[1]);
+  Serial.print(q.x);
   Serial.print(DATA_SEP);
-  Serial.print(q[2]);
+  Serial.print(q.y);
   Serial.print(DATA_SEP);
-  Serial.print(q[3]);
+  Serial.print(q.z);
   Serial.print(";");
 }
